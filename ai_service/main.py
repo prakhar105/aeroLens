@@ -8,3 +8,4 @@ app = FastAPI(title="AI Microservice for Aerial Images")
 app.include_router(detection_router)
 app.include_router(segmentation_router)
 app.include_router(change_router)
+

@@ -1,0 +1,119 @@
+{
+  "info": {
+    "name": "AeroLens Backend API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_postman_id": "aerolens-backend-collection"
+  },
+  "item": [
+    {
+      "name": "Health Check",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            ""
+          ]
+        }
+      }
+    },
+    {
+      "name": "Upload File",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "image",
+              "type": "file",
+              "src": "test.png"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:5000/upload",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "upload"
+          ]
+        }
+      }
+    },
+    {
+      "name": "List Uploads",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/upload",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "upload"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Save Detection",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"uploadId\": \"68d71bb6fd04868e9c72ea64\",\n  \"label\": \"car\",\n  \"confidence\": 0.95,\n  \"bbox\": [\n    10,\n    20,\n    100,\n    200\n  ]\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/detections",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "detections"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Get Detections by UploadId",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/detections/68d71bb6fd04868e9c72ea64",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "detections",
+            "68d71bb6fd04868e9c72ea64"
+          ]
+        }
+      }
+    }
+  ]
+}
