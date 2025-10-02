@@ -5,17 +5,17 @@ It provides a scalable REST API, modular routing, and environment-driven configu
 
 ---
 
-## ✨ Features
-- ⚡ REST API with **Express.js**
-- 🔑 Environment variables via **dotenv**
-- 📦 Modular routing system
-- 🐳 Ready for containerization (Docker-friendly)
-- 🛠 Git/GitHub integration for version control
-- 🚀 ES Modules support (`"type": "module"`)
+##  Features
+-  REST API with **Express.js**
+-  Environment variables via **dotenv**
+-  Modular routing system
+-  Ready for containerization (Docker-friendly)
+-  Git/GitHub integration for version control
+-  ES Modules support (`"type": "module"`)
 
 ---
 
-## 🛠 Tech Stack
+##  Tech Stack
 - **Node.js** (v20 LTS)
 - **npm** (v10+)
 - **Express.js**
@@ -24,7 +24,7 @@ It provides a scalable REST API, modular routing, and environment-driven configu
 
 ---
 
-## 📂 Project Structure
+##  Project Structure
 ```
 aerolens-backend/
 ├── src/
@@ -39,7 +39,7 @@ aerolens-backend/
 
 ---
 
-## 📦 Installation & Setup
+##  Installation & Setup
 
 ### 1. Clone the repository
 ```bash
@@ -60,13 +60,13 @@ PORT=3000
 
 ---
 
-## 🚀 Running the Server
+##  Running the Server
 
 ### Start normally
 ```bash
 npm start
 ```
-👉 Server will run at: [http://localhost:3000](http://localhost:3000)
+ Server will run at: [http://localhost:3000](http://localhost:3000)
 
 ### Start with auto-reload (development mode)
 ```bash
@@ -76,7 +76,7 @@ nodemon src/index.js
 
 ---
 
-## 📝 Example Code
+##  Example Code
 
 ### **src/index.js**
 ```js
@@ -97,7 +97,7 @@ app.use("/api", routes);
 
 // Start server
 app.listen(PORT, () => {
-  console.log(`🚀 Server running at http://localhost:${PORT}`);
+  console.log(` Server running at http://localhost:${PORT}`);
 });
 ```
 
@@ -110,7 +110,7 @@ const router = express.Router();
 
 // Sample route
 router.get("/", (req, res) => {
-  res.json({ message: "Welcome to AeroLens Backend API 🚀" });
+  res.json({ message: "Welcome to AeroLens Backend API " });
 });
 
 // Add more routes here
@@ -121,14 +121,14 @@ export default router;
 
 ---
 
-## 🐛 Troubleshooting
+##  Troubleshooting
 
 ### Warning: `MODULE_TYPELESS_PACKAGE_JSON`
 If you see:
 ```
 Warning: Module type of file is not specified...
 ```
-✅ Add `"type": "module"` in `package.json`:
+ Add `"type": "module"` in `package.json`:
 ```json
 {
   "name": "aerolens-backend",
@@ -144,21 +144,21 @@ Warning: Module type of file is not specified...
 
 ### Error: `TypeError: argument handler must be a function`
 This happens if your routes are exported/imported incorrectly.  
-✅ Use **default export** in `routes.js` and default import in `index.js`.
+ Use **default export** in `routes.js` and default import in `index.js`.
 
 ---
 
-## 📜 License
+##  License
 MIT License © 2025 [Your Name / AeroLens Team]
 
 ---
 
-## 🤝 Contributing
+##  Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you’d like to change.
 
 ---
 
-## 🌟 Future Improvements
+## Future Improvements
 - API documentation with Swagger / Postman
 - Database integration (PostgreSQL / MongoDB)
 - Authentication & authorization
